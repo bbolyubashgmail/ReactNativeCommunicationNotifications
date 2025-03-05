@@ -41,7 +41,6 @@
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
-// Реєстрація URL-адрес
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
     return [self bundleURL];
