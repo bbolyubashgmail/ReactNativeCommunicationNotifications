@@ -1,0 +1,47 @@
+// запит треба робити по апі: https://fcm.googleapis.com/v1/projects/project-id/messages:send
+{
+  "message": {
+    // токен девайсу
+    "token": "fd7zhvog-0opqNRERO09h5:APA91bG2iwUD_fcvteqnwmi7FXeFjNhRNihGsuyWUKSxTIfoWI9in4nnvLgedkaWP1f2DuX2i5_jsvaPblEslHbHFqG8BlnlwsVDVRs9eGjwEJE8i7RKxfU",
+    "notification": {
+      "title": "Example Notification Title",
+      "body": "Example Notification Body"
+    },
+    "data": {
+      "test": "test"
+    },
+    "apns": {
+      "payload": {
+        // mutable-content: 1 і content-available: 1 обовязкові
+        "aps": {
+          "mutable-content": 1,
+          "content-available": 1
+        },
+        // notifee_options --> "ios" --> "communicationInfo" - необхідне поле для відображення communication notification
+        "notifee_options": {
+          "ios": {
+            // sound - для відтворення дефолтного звуку
+            "sound": "default",
+
+            // foregroundPresentationOptions із значеннями true - для відображення в передньому плані (коли додаток відкрито)
+            "foregroundPresentationOptions": {
+              "alert": true,
+              "badge": true,
+              "sound": true,
+              "banner": true,
+              "list": true
+            },
+            "communicationInfo": {
+              "conversationId": "12",
+              "sender": {
+                "id": "user_34432",
+                "avatar": "https://picsum.photos/200",
+                "displayName": "User Name"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
