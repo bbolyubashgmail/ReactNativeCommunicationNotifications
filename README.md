@@ -13,5 +13,5 @@
 
 1. В Info.plist додаємо <key>FirebaseAppDelegateProxyEnabled</key><false/>
 
-2. Редагуємо AppDelegate.m:
+2. Редагуємо AppDelegate.m зі всіма змінами, які там вказані
 
