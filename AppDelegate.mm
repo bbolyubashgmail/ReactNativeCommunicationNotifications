@@ -8,6 +8,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import <FirebaseMessaging/FirebaseMessaging.h>
 
+// ---------- ADD interface -------- //
 @interface AppDelegate () <UIApplicationDelegate, UNUserNotificationCenterDelegate, FIRMessagingDelegate>
 @end
 
